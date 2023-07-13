@@ -1,3 +1,6 @@
 {
-    "name": "open-sandbox"
+    "name": "open-sandbox.server",
+    "devDependencies": {
+        "@types/node": "^20.4.2"
+    }
 }
