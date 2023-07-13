@@ -1,6 +1,26 @@
 {
     "name": "open-sandbox.server",
+    "version": "1.0.0",
+    "type": "module",
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint"
+        }
+    },
+    "scripts": {
+        "debug": "npx nodemon",
+        "lint": "npx prettier sources/ --write",
+        "build": "",
+        "prepare": "cd .. && husky install server/.husky"
+    },
+    "dependencies": {
+        "socket.io": "^4.7.1"
+    },
     "devDependencies": {
-        "@types/node": "^20.4.2"
+        "@types/node": "^20.4.2",
+        "@types/socket.io": "^3.0.2",
+        "husky": "^8.0.3",
+        "nodemon": "^3.0.1",
+        "prettier": "^3.0.0"
     }
 }
