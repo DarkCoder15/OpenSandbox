@@ -9,7 +9,8 @@
     },
     "scripts": {
         "lint:check": "npx prettier sources/ --check",
-        "lint:write": "npx prettier sources/ --write"
+        "lint:write": "npx prettier sources/ --write",
+        "postinstall": "cd .. && husky install server/.husky"
     },
     "dependencies": {
         "express": "^4.18.2",
