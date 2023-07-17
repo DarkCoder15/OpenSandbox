@@ -18,6 +18,9 @@ module.exports = {
             }
         ]
     },
+    resolve: {
+        extensions: [ ".js", ".ts", ".scss", ".sass" ]
+    },
     plugins: [
         htmlWebpackPlugin
     ]
