@@ -1,44 +1,24 @@
-const webpack = require("webpack");
 const path = require("path");
 
-const { cleanWebpackPlugin } = require("./plugins/clean-webpack-plugin.js");
-
-const environment = process.env.NODE_ENV == "production";
+const { htmlWebpackPlugin } = require("./plugins/html-webpack-plugin");
 
 module.exports = {
     entry: {
-        openSanbox: "../sources/scripts/index.ts",
+        bundle: path.resolve(__dirname, "../sources/index.ts"),
     },
     output: {
-        filename: environment ? "[name].[contenthash].js" : "[name].js",
-        path: path.resolve(__dirname, "../build/scripts")
+        path: path.resolve(__dirname, "../build/scripts"),
+        filename: "[name].[contenthash].js"
     },
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
-                use: [ "" ],
-                exclude: /node_modules/
-            },
-            {
-                test: /\.(ts|tsx)$/,
-                use: [ "ts-loader" ],
-                exclude: /node_modules/
-            },
-            {
                 test: /\.s(a|c)ss$/,
-                use: [ "" ]
+                use: [ "style-loader", "css-loader", "sass-loader" ]
             }
         ]
     },
-    resolve: {
-        extensions: [ "*", ".js", ".jsx", ".sass", ".scss" ]
-    },
     plugins: [
-        cleanWebpackPlugin
-    ],
-    devServer: {
-        port: 3000
-    },
-    mode: environment ? "production" : "development"
+        htmlWebpackPlugin
+    ]
 }
