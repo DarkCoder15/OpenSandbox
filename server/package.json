@@ -1,0 +1,31 @@
+{
+    "name": "open-sandbox.server",
+    "version": "1.0.0",
+    "author": "x7k3e21",
+    "type": "module",
+    "scripts": {
+        "lint:check": "npx prettier sources/ --check",
+        "lint:write": "npx prettier sources/ --write",
+        "build": "npx tsc --project ./tsconfig.json"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "socket.io": "^4.7.1"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.17",
+        "@types/node": "^20.4.2",
+        "@types/socket.io": "^3.0.2",
+        "nodemon": "^3.0.1",
+        "prettier": "^3.0.0",
+        "typescript": "^5.1.6"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DarkCoder15/OpenSandbox.git"
+    },
+    "bugs": {
+        "url": "https://github.com/DarkCoder15/OpenSandbox/issues"
+    },
+    "homepage": "https://github.com/DarkCoder15/OpenSandbox"
+}

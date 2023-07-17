@@ -1,0 +1,7 @@
+package.json text eol=lf
+deno.jsonc text eol=lf
+
+tsconfig.json text eol=lf
+nodemon.json text eol=lf
+
+.prettierrc text eol=lf
