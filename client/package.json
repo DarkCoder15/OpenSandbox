@@ -4,17 +4,23 @@
     "author": "x7k3e21",
     "scripts": {
         "lint:check": "npx prettier sources/ --check",
-        "lint:write": "npx prettier sources/ --write"
+        "lint:write": "npx prettier sources/ --write",
+        "webpack:serve": "NODE_ENV=development webpack serve --config ./webpack/webpack.config.js",
+        "webpack:build": "NODE_ENV=production webpack --config ./webpack/webpack.config.js"
     },
     "devDependencies": {
         "@types/node": "^20.4.2",
+        "clean-webpack-plugin": "^4.0.0",
         "css-loader": "^6.8.1",
+        "mini-css-extract-plugin": "^2.7.6",
         "prettier": "^3.0.0",
+        "sass": "^1.63.6",
         "sass-loader": "^13.3.2",
         "ts-loader": "^9.4.4",
         "typescript": "^5.1.6",
         "webpack": "^5.88.1",
-        "webpack-cli": "^5.1.4"
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
     },
     "repository": {
         "type": "git",
