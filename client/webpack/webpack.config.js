@@ -7,7 +7,7 @@ module.exports = {
         bundle: path.resolve(__dirname, "../sources/scripts/index.ts"),
     },
     output: {
-        path: path.resolve(__dirname, "../build/scripts"),
+        path: path.resolve(__dirname, "../build"),
         filename: "[name].[contenthash].js"
     },
     module: {
