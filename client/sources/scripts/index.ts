@@ -18,6 +18,8 @@ const CAMERA: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(
 	CAMERA_FAR
 );
 
+CAMERA.position.z = 2;
+
 let rendererWidth: number = window.innerWidth;
 let rendererHeight: number = window.innerHeight;
 
@@ -51,8 +53,18 @@ function onWindowResize(): void {
 	render();
 }
 
+function update(): void {
+	window.requestAnimationFrame(update);
+
+	sampleCube.rotation.x = sampleCube.rotation.x + 0.01;
+	sampleCube.rotation.y = sampleCube.rotation.y + 0.01;
+	sampleCube.rotation.z = sampleCube.rotation.z + 0.01;
+
+	render();
+}
+
 function render(): void {
 	RENDERER.render(SCENE, CAMERA);
 }
 
-render();
+update();
