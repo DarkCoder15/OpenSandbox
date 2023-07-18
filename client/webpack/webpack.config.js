@@ -4,7 +4,7 @@ const { htmlWebpackPlugin } = require("./plugins/html-webpack-plugin");
 
 module.exports = {
     entry: {
-        bundle: path.resolve(__dirname, "../sources/index.ts"),
+        bundle: path.resolve(__dirname, "../sources/scripts/index.ts"),
     },
     output: {
         path: path.resolve(__dirname, "../build/scripts"),
@@ -17,9 +17,6 @@ module.exports = {
                 use: [ "style-loader", "css-loader", "sass-loader" ]
             }
         ]
-    },
-    resolve: {
-        extensions: [ ".js", ".ts", ".scss", ".sass" ]
     },
     plugins: [
         htmlWebpackPlugin
