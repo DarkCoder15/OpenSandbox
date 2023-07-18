@@ -1,7 +1,10 @@
 const path = require("path");
 
 const { htmlWebpackPlugin } = require("./plugins/html-webpack-plugin");
+const { miniCssExtractPlugin } = require("./plugins/mini-css-extract-plugin");
+
 const { cleanWebpackPlugin } = require("./plugins/clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     entry: {
@@ -20,12 +23,13 @@ module.exports = {
             },
             {
                 test: /\.s(a|c)ss$/,
-                use: [ "style-loader", "css-loader", "sass-loader" ]
+                use: [ MiniCssExtractPlugin.loader, "css-loader", "sass-loader" ]
             }
         ]
     },
     plugins: [
         htmlWebpackPlugin,
+        miniCssExtractPlugin,
         cleanWebpackPlugin
     ]
 }

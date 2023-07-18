@@ -1,5 +1,7 @@
 import * as THREE from "three";
 
+import "../styles/default.scss";
+
 const CAMERA_FOV: number = 75;
 
 let cameraAspectRatio: number = window.innerWidth / window.innerHeight;
