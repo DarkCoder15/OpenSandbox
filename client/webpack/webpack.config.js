@@ -1,6 +1,7 @@
 const path = require("path");
 
 const { htmlWebpackPlugin } = require("./plugins/html-webpack-plugin");
+const { cleanWebpackPlugin } = require("./plugins/clean-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -19,6 +20,7 @@ module.exports = {
         ]
     },
     plugins: [
-        htmlWebpackPlugin
+        htmlWebpackPlugin,
+        cleanWebpackPlugin
     ]
 }

@@ -9,6 +9,7 @@
     },
     "devDependencies": {
         "@types/node": "^20.4.2",
+        "@types/three": "^0.154.0",
         "clean-webpack-plugin": "^4.0.0",
         "css-loader": "^6.8.1",
         "html-webpack-plugin": "^5.5.3",
@@ -30,5 +31,8 @@
     "bugs": {
         "url": "https://github.com/DarkCoder15/OpenSandbox/issues"
     },
-    "homepage": "https://github.com/DarkCoder15/OpenSandbox"
+    "homepage": "https://github.com/DarkCoder15/OpenSandbox",
+    "dependencies": {
+        "three": "^0.154.0"
+    }
 }
